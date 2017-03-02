@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
 
-    Logger log = LoggerFactory.getLogger(UserController.class);
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
     @RequestMapping("/")
     @ResponseBody
@@ -22,7 +22,7 @@ public class UserController {
         user.setId(1);
         user.setName("user");
         user.setAge(12);
-        log.info("user :{}",user);
+        log.info("user :{}", user);
         return user;
     }
 }
